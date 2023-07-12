@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: montserrat;
+
+}
+
+nav {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background: #303030;
+
+}
+
+label.logo {
+    position: fixed;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+
+nav .img {
+    position: fixed;
+    border-radius: 8px;
+
+}
+
+nav ul {
+
+    float: right;
+    margin-right: 40 px;
+}
+
+nav li {
+
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+
+nav a {
+
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 5px 5px;
+    border-radius: 3px;
+}
+
+a.active,
+a:hover {
+    border: 1px solid white;
+    transition: .5s;
+
+}
+
+.content-items img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-section {
+    width: 100%;
+    height: 900%;
+    background: url(../Images/section2.jpg) center;
+    background-size: cover;
+
+}
+
+.detail-section h1 {
+    text-align: center;
+    padding: 25px 0;
+    color: whitesmoke;
+}
+
+.container {
+    width: 1170px;
+    margin: auto;
+    /* border: 1px solid white; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.custom-data {
+    color: black;
+    flex-basis: 35%;
+    background-color: white;
+    margin: 25px 50px;
+
+    box-shadow: 0px 0px 10px 3px lightgray;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.custom-data h3 {
+    padding: 10px 10px;
+}
+
+.custom-data p {
+    font-size: 13px;
+    padding: 10 px;
+}
+
+.custom-data button {
+    background: blue;
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.custom-data :hover {
+    background: grey;
+}
+
+/* .custom-data:hover h3, .custom-data:hover p{
+    color: black;
+ } */
+@media only screen and(min-width: 200px) and (max-width:767px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+footer {
+    /* position: fixed; */
+    color: white;
+    background-color: #303030;
+    bottom: 0px;
+    width: 100%
+}
+
+.foot-content {
+    padding-top: 3%;
+    padding-bottom: 10%;
+    display: flex;
+
+
+}
+
+.foot-content .left-box {
+
+    padding-bottom: 10%;
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.foot-content .right-box {
+
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.foot-content .center-box {
+
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.left-box h2 {
+
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.right-box h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+}
+
+
+
+.center-box h2 {
+
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.left-box,
+.center-box {
+    padding: 10px;
+    line-height: 2;
+}
