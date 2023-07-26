@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Details | Olympians</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/gamesdetails.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+</head>
+
+<body>
+    <!-------------------------  HEADER  ------------------------------------>
+
+    <header id="home">
+        <div class="image">
+            <nav>
+                <input type="checkbox" id="menu-icon">
+                <label class="logo">
+                    Olympians
+                    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo">
+                </label>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a class="active" href="{{ url_for('games') }}">Games</a></li>
+                    <li><a href="{{ url_for('athletes') }}">Athletes</a></li>
+                    <li><a href="{{ url_for('visualization') }}">Visualization</a></li>
+                </ul>
+                <label id="menu-icon-label" for="menu-icon">&#9776;</label>
+            </nav>
+        </div>
+    </header>
+    <!-------------------------  HEADER   END ------------------------------------>
+
+
+    <section id="detail">
+        <div class="detail-section">
+            <h1> Olympic Games Detail</h1>
+            <div class="container">
+
+                <div class="custom-data" id="Athe">
+                    <h2> Athletics</h2>
+                    <p>
+                        <strong>About:</strong> Athletics is a sport that includes a number of events involving running,
+                        jumping, throwing or walking. Often referred to as track & field, the sport includes
+                        single events, such as the 100m, marathon or long jump, combined events, including the decathlon
+                        and heptathlon, or team-based events such as the 4x100m relays.
+                    </p>
+                    <p> <strong>History:</strong> While athletics has been practised throughout history, the first ever event
+                        contested at the ancient Olympic Games was the “stadium” race, a sprint of about 192 metres.
+                        Winners in this event have been recorded from as far back as 776 BC.</p>
+                    <a href="{{ url_for('athletes') }}#Athlets"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="Arch">
+                    <h2> Archery</h2>
+                    <p>
+                        <strong>About:</strong> At the Olympics, outdoor target archery is practised with recurve bows. This sees
+                        athletes fire at targets 70 metres away, with competitors going head-to-head to
+                        win set points (with 2 points for winning a set or 1 point for tying a set), with the first to 6
+                        set points winning the match. Other types of archery for sport includfield archery, indoor
+                        archery, and para archery. Other bows that may be used include a compound
+                        bow or a barebow. Each arrow can score from 0 to 10 points, with 10 points for hitting the
+                        smallest rings of the target. If the arrow is touching a line separating two scoring zones, the
+                        higher score counts. There is often also an inner-most ring, which also awards 10 points but is
+                        used as a tie-breaker if needed. After each set of three arrows per competitor, the archer with
+                        more points wins the set and picks up 2 set points in the match.
+                    </p>
+                    <p>
+                        <strong>History:</strong> Archery first appeared in the Olympic Games in 1900, was contested again in 1904, 1908,
+                        and 1920, then again—after an absence of 52 years—from 1972 to the present. The most decorated
+                        archer in Olympic history is Hubert Van Innis of Belgium, who competed in 1900 and 1920, winning
+                        six gold and three silver medals.
+
+                        Currently, five events are on the archery programme at each Olympic Games: men's and women's
+                        individual and team events, and a mixed team event.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#Archery"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="Bad">
+                    <h2> Badminton</h2>
+                    <p>
+                        <strong>About:</strong> Badminton is a racket-and-shuttle game played on a court by two players or doubles teams.
+                        The exact rules of badminton have changed over time, but the aim is to land the shuttle
+                        in-bounds in the opponent's half of the court without the opponent returning it successfully.
+                        Matches are currently played to a best-of-three games, with the first to 21 points winning each
+                        game. Each player or doubles team must win each game by two clear points, except if a game
+                        reaches 29-all, a single sudden-death point is played.
+                    </p>
+                    <p>
+                        <strong>History:</strong> Badminton made its debut as a demonstration sport at the 1972 Olympic Games in Munich.
+                        It was not until the 1992 Games in Barcelona that it was officially included on the Olympic
+                        programme, with men's and women's singles and doubles events. The mixed doubles event made its
+                        debut in 1996 at the Atlanta Olympic Games. Since then, the number of events has
+                        remained unchanged.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#badminton"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="Hock">
+                    <h2>Hockey</h2>
+                    <p>
+                        <strong>About:</strong> There are two types of hockey - field and ice. Field hockey, played at the Olympic Summer
+                        Games, takes place on an artificial-grass pitch where two teams of 11 - 10 infield players and
+                        one goalkeeper - compete against each other to score the most goals in the opposing side’s net.
+                        Players use a stick with a rounded end to hit a hard ball, slightly larger than a tennis ball.
+                        A hockey match lasts 60 minutes and consists of four periods of 15 minutes. Eleven players take
+                        to the pitch but can be replaced at any time by subs, as often as desired.
+
+                        Players use a hooked stick to hit a hard ball toward a goal that is 3.66m wide and 2.14m high.
+                        Located at each end of the 91m by 55m pitch, the goals are surrounded by a D-shaped shooting
+                        area, the only place from which a goal can be scored.
+
+                        Should the match finish with a draw in a knockout stage, a penalty shootout takes place.
+                    </p>
+                    <p>
+                        <strong>History:</strong> The inaugural Olympic hockey competition for men was held in London in 1908 with
+                        England, Ireland, Scotland and Wales - competing separately - joining Germany and France to make
+                        up the six entrants.
+
+                        Dropped from the 1912 Stockholm Games, hockey reappeared in 1920 in Antwerp before being omitted
+                        again in Paris in 1924.
+
+                        Having founded the national hockey association of France in 1920, Paul Léautey then founded the
+                        world governing body, the International Hockey Federation(FIH) four years later, which ensured
+                        hockey became a permanent fixture at the Olympics from Amsterdam 1928 onwards.
+
+                        Women's hockey was included for the first time in Moscow 1980 with Zimbabwe taking home the
+                        spoils in the debut edition.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#hockey"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="Jav">
+                    <h2> Javelin Throw </h2>
+                    <p>
+                        <strong>About:</strong> The javelin throw is a track and field event where the javelin, a spear about 2.5 m (8 ft
+                        2 in) in length, is thrown as far as possible. The size, shape, minimum weight, and center of
+                        gravity of the javelin are all defined by World Athletics rules. In international competition,
+                        men throw a javelin between 2.6 and 2.7 m (8 ft 6 in and 8 ft 10 in) in length and 800 g (28 oz)
+                        in weight, and women throw a javelin between 2.2 and 2.3 m (7 ft 3 in and 7 ft 7 in) in length
+                        and 600 g (21 oz) in weight. The javelin has a grip, about 150 mm (5.9 in) wide, made of cord
+                        and located at the javelin's center of gravity (0.9 to 1.06 m (2 ft 11 in to 3 ft 6 in)) from
+                        the javelin tip for the men's javelin and 0.8 to 0.92 m (2 ft 7 in to 3 ft 0 in) from the
+                        javelin tip for the women's javelin.
+                    </p>
+                    <p>
+                        <strong>History:</strong> Throwing the javelin as sport evolved from the everyday use of the spear in hunting and
+                        warfare. It was widely practised in Ancient Greece and incorporated into the Olympic Games in
+                        708BC as part of the pentathlon. It has been part of the modern Olympic Games programme since
+                        1908 for men and 1932 for women.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#jawalin"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="Shoot">
+                    <h2> Shooting</h2>
+                    <p>
+                        <strong>About:</strong> Sport shooting is the use of a firearm to hit a target with a bullet. These can be
+                        stationary targets or moving targets known as clays.
+                        Shooting is broadly split, for Olympic competition at least, into three different groups: rifle,
+                        pistol and shotgun.
+                        Rifle and pistol competitions are held on shooting ranges where the athletes aim at targets a
+                        set distance away. In shotgun events, competitors shoot at clay targets propelled at a series of
+                        different directions and angles.
+                        Most events involve a ranking or qualification round in a set time before shooters go up against
+                        each other in elimination competition.
+                    </p>
+                    <p>
+                        <strong>History:</strong> Shooting has been a near-permanent fixture at the modern Olympic Games, only being
+                        omitted at the 1904 and 1928 Games.
+                        From five events at the inaugural 1896 Games to 15 across six disciplines today, the sport has
+                        grown steadily alongside advances in firearms technology.
+                        The current six disciplines consist of four with stationary targets: air pistol, air rifle, 25m
+                        pistol (rapid fire for men) and rifle three positions (kneeling, prone, standing)
+                    </p>
+                    <a href="{{ url_for('athletes') }}#shooting"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="table">
+                    <h2> Table Tennis</h2>
+                    <p>
+                        <strong>About:</strong> Table tennis is a racket-and-ball sport played between two players or doubles teams,
+                        similar to tennis but on a table as its name suggests. Exact scoring rules may differ from
+                        tournament to tournament and even round to round within an event, but generally matches are
+                        best-of-5- or best-of-7-games. Within each game, the first player to 11 points with a 2-point
+                        cushion takes the game. There are also rules regarding what type of paddles are legal.
+                    </p>
+                    <p>
+                        <strong>History:</strong> The first World Championships were held in London in 1926, but the sport had to wait a
+                        long time before it was given its Olympic debut at the 1988 Seoul Games. Athletes from the
+                        People's Republic of China have dominated the sport, winning 32 of 37 gold medals
+                        from 1988 to 2021.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#table-tennies"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="ten">
+                    <h2> Tennis</h2>
+                    <p>
+                        <strong>About:</strong> The modern game is played in singles (one player versus another), doubles (teams of two)
+                        and mixed doubles (mixed-gender teams) and features differing scoring systems across
+                        international events.
+                        Played on a rectangular court lined for singles and doubles, players wield stringed rackets and
+                        hit the ball over a regulation tennis net, which divides the court in two.
+                        Players alternate serving (an overhead motion with the racket) and must hit the ball into the
+                        lined service box. They get a first and second serve attempt to start each point, which then is
+                        played out by hitting the ball in the lines of the court - either singles or doubles depending
+                        on which is being contested.
+                        The ball can bounce only once, and must be hit after the bounce or out of the air, which is
+                        known as a volley.
+                    </p>
+                    <p>
+                        <strong>History:</strong> The earliest recognisable relative to tennis, as we know it, was "jeu de paume", played
+                        in 11th century France. In 1913, lawn tennis was becoming increasingly popular worldwide.
+                        Therefore, it seemed natural that the existing National Tennis Associations should join forces
+                        to ensure the game was uniformly structured. An international conference was held between 12
+                        nations in Paris and the International Lawn Tennis Federation (ILTF) was created.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#tennies"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="weight">
+                    <h2> Weight Lifting</h2>
+                    <p>
+                        <strong>About:</strong> Weightlifting is a sport where athletes lift barbells loaded with weights. Weightlifting
+                        tests the strength, power and technique of athletes.
+                        Weightlifters compete in bodyweight categories, or weight classes.
+                        There are two stages in Olympic weightlifting - the snatch and the clean and jerk.
+                        In snatch weightlifters pick up the barbell and lift it above their head in one singular motion.
+                        In the clean and jerk weightlifters are first required to pick up the barbell and bring it up to
+                        their chest (clean). The lifters must then pause and extend their arms and legs to lift it above
+                        the head (jerk) with a straight elbow and have to hold it there until a buzzer is sounded.
+                        A weightlifter is given three snatch attempts and three clean and jerk attempts each. A
+                        weightlifter's best attempt at snatch and the clean and jerk are then added up and the one with
+                        the highest combined weight lifted is declared the winner.
+                    </p>
+                    <p>
+                        <strong>History:</strong> Although men's weightlifting has always been on the programme of the Olympic
+                        Games—except for the 1900, 1908 and 1912 editions—women started to participate only at the 2000
+                        Games in Sydney.
+                        The Olympic weightlifting programme has evolved greatly over time. Today, weightlifters compete
+                        in snatch and clean and jerk, and are placed according to their total combined result. From the
+                        2000 Olympic Games in Sydney onwards, men have competed in eight weight categories
+                        and women in seven.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#weightlifting"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="wrest">
+                    <h2> Wrestling</h2>
+                    <p>
+                        <strong>About:</strong> Wrestling is a sport where two individuals engage or grapple with the aim of throwing or
+                        holding their opponent's shoulders to the ground, or else outscore them during the match.
+                        At the Olympics there are two variations of wrestling: Freestyle and Greco-Roman.
+                        Wrestling is a sport where two individuals engage or grapple with the aim of throwing or holding
+                        their opponent's shoulders to the ground, or else outscore them during the match.
+                        At the Olympics there are two variations of wrestling: Freestyle and Greco-Roman. The rules are
+                        almost identical, except that in Greco-Roman a wrestler may not attack an opponent below the
+                        waist or use his own legs to execute holds.
+                    </p>
+                    <p>
+                        <strong>History:</strong> Wrestling was introduced into the ancient Olympics in 708 BC, When the modern Olympic
+                        Games resumed in Athens in 1896, wrestling became a focus of the Games. Other than the 1900
+                        Olympics, wrestling has been part of every Summer Olympic programme since the first modern
+                        Olympic Games were held in Athens in 1896. In 1904, Olympic officials added freestyle wrestling,
+                        commonly known as "catch as catch can", to the programme.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#wrestling"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="Gym">
+                    <h2> Gymnastic</h2>
+                    <p>
+                        <strong>About:</strong> Fencing is a combat sport in which two athletes use swords to attack and defend against
+                        one another with the aim of striking their opponent in order to score points.
+                        The three disciplines of modern fencing are the foil, the épée, and the sabre.
+                        A fencing bout involves two fencers and a referee. The objective is for an athlete to land hits
+                        or 'touches' with their sword on designated areas of their opponent's body in order to score
+                        points. All three disciplines take place on a piste which is 14m long and 1.5m-2m wide.
+                        Retreating off the end of the piste results in a point to the opponent. Each touch is worth one
+                        point, and each bout is separated into three periods of three minutes (with a one-minute break
+                        between periods). The first competitor to reach 15 points - or the athlete in the lead when the
+                        third period is completed - is declared the winner.
+                        In team competition, each member of one team faces each member of the other team once (for a
+                        total of nine bouts). Each bout is three minutes long, or to 5 points, with the score carrying
+                        over between bouts. If the ninth bout is completed and neither team has 45 points, the team with
+                        the most points is declared the winner.
+                    </p>
+                    <p>
+                        <strong>History:</strong> Fencing is just one of five sports which have been permanent fixtures at the Olympic
+                        Games since the first modern Games were held in 1896. Only three events were contested at the
+                        1896 Games in Athens (men's individual foil, men's individual sabre, masters foil), but that
+                        number has since increased to 12, with men's and women's individual and team competitions for
+                        each discipline.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#gymnastic"> <button>Read More About Athletes</button></a>
+                </div>
+
+                <div class="custom-data" id="Cycle">
+                    <h2> Cycling</h2>
+                    <p>
+                        <strong>About:</strong> Athletics is a sport that includes a number of events involving running, jumping,
+                        throwing or walking. Often referred to as track & field, the sport includes single events, such
+                        as the 100m, marathon or long jump, combined events, including the decathlon and heptathlon, or
+                        team-based events such as the 4x100m relays.
+
+                    </p>
+                    <p>
+                        <strong>History:</strong> While athletics has been practised throughout history, the first ever event contested
+                        at the ancient Olympic Games was the “stadium” race, a sprint of about 192 metres. Winners in
+                        this event have been recorded from as far back as 776 BC.
+                    </p>
+                    <a href="{{ url_for('athletes') }}#cycling"> <button>Read More About Athletes</button></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

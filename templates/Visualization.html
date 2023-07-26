@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization | Olympians</title>
+    <!-- importing chart.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/visualization.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+</head>
+
+<body>
+    <header id="home">
+        <div class="image">
+            <nav>
+                <input type="checkbox" id="menu-icon">
+                <label class="logo">
+                    Olympians
+                    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo">
+                </label>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('games') }}">Games</a></li>
+                    <li><a href="{{ url_for('athletes') }}">Athletes</a></li>
+                    <li><a class="active" href="{{ url_for('visualization') }}">Visualization</a></li>
+                </ul>
+                <label id="menu-icon-label" for="menu-icon">&#9776;</label>
+            </nav>
+        </div>
+    </header>
+    <section class="container">
+        <!-------------  CARDS first row ----------------->
+        <div id="cards-row1">
+            <div class="card" id="card1">
+                <h3>Indian Players</h3>
+                <h1>{{data['Players']}}</h1>
+            </div>
+            <div class="card" id="card2">
+                <h3>Total Sports</h3>
+                <h1>{{data['Sports']}}</h1>
+            </div>
+            <div class="card" id="card3">
+                <h3>Total Medals</h3>
+                <h1>{{data['Gold'] + data['Silver'] + data['Bronze']}}</h1>
+            </div>
+        </div>
+
+        <!------------- CHARTS second row---------------->
+        <div id="charts-row2">
+
+            <div class="chart">
+                <div class="dropdown">
+                    <button class="dropbtn" style="background-color: rgb(255, 153, 51);">Medals</button>
+                    <div class="dropdown-content">
+                        <a href="javascript:update_chart1('City')">City</a>
+                        <a href="javascript:update_chart1('Player')">Player</a>
+                        <a href="javascript:update_chart1('Sports')">Sports</a>
+                        <a href="javascript:update_chart1('Season')">Season</a>
+                        <a href="javascript:update_chart1('Sex')">Sex</a>
+                        <a href="javascript:update_chart1('Year')">Year</a>
+                    </div>
+                </div>
+                <canvas id="myChart1" width="300px" height="300px"></canvas>
+            </div>
+
+            <div class="chart">
+                <canvas id="myChart2" width="300px" height="300px"></canvas>
+            </div>
+
+            <div class="chart">
+                <div class="dropdown">
+                    <button class="dropbtn" style="background-color: rgb(19, 136, 8);">Players</button>
+                    <div class="dropdown-content">
+                        <a href="javascript:update_chart3('Sports')">Sports</a>
+                        <a href="javascript:update_chart3('Season')">Season</a>
+                        <a href="javascript:update_chart3('Sex')">Sex</a>
+                        <a href="javascript:update_chart3('Year')">Year</a>
+                    </div>
+                </div>
+                <canvas id="myChart3" width="300px" height="300px"></canvas>
+            </div>
+        </div>
+        <!------------- CHARTS third row---------------->
+        <div id="charts-row3">
+            <div class="chart">
+                <!-- Buttons to toggle line chart data -->
+                <div class="buttons">
+                    <button id="btnAge">Age</button>
+                    <button id="btnWeight">Weight</button>
+                    <button id="btnHeight">Height</button>
+                </div>
+                <canvas id="myChart4" width="450px" height="300px"></canvas>
+            </div>
+
+            <div class="chart">
+                <canvas id="myChart5" width="450px" height="300px"></canvas>
+            </div>
+        </div>
+
+    </section>
+
+    <!------- to use this data in js file ------->
+    <script type="text/javascript">
+        Gold = '{{ data["Gold"] }}';
+        Silver = '{{ data["Silver"] }}';
+        Bronze = '{{ data["Bronze"] }}';
+        Avg_ahw_labels = JSON.parse('{{ data["Avg_ahw_labels"] | tojson }}');
+        Avg_a = JSON.parse('{{ data["Avg_a"] | tojson}}');
+        Avg_h = JSON.parse('{{ data["Avg_h"] | tojson}}');
+        Avg_w = JSON.parse('{{ data["Avg_w"] | tojson}}');
+        M_count = '{{ data["M"] }}';
+        F_count = '{{ data["F"] }}';
+        Cities = JSON.parse('{{ data["Cities"] | tojson}}');
+        Matches = JSON.parse('{{ data["Matches"] | tojson}}');
+        Names = JSON.parse('{{ data["Names"] | tojson}}');
+        Medals = JSON.parse('{{ data["Medals"] | tojson}}');
+
+        // functions to update charts ------
+        function update_chart1(name) {
+            var xhr = new XMLHttpRequest(); // creating object
+            xhr.open('GET', '{{url_for("get_data_of_chart1")}}' + `?update=${name}`, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        updateChart(myChart1, response);
+                    }
+                    else {
+                        console.error('Error in updating Chart for ' + name + '\n status:' + xhr.status);
+                    }
+                }
+            }
+            xhr.send();
+        }
+
+        function update_chart3(name) {
+            var xhr = new XMLHttpRequest(); // creating object
+            xhr.open('GET', '{{url_for("get_data_of_chart3")}}' + `?update=${name}`, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        updateChart(myChart3, response);
+                    }
+                    else {
+                        console.error('Error in updating Chart for ' + name + '\n status:' + xhr.status);
+                    }
+                }
+            }
+            xhr.send();
+        }
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='JavaScript/charts.js') }}"></script>
+
+</body>
+
+</html>

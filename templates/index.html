@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympians</title>
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+    <script src="https://kit.fontawesome.com/e11a2cc4f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-------------------------  HEADER  ------------------------------------>
+    <header id="home">
+        <div class="image">
+            <nav>
+                <input type="checkbox" id="menu-icon">
+                <label class="logo">
+                    Olympians
+                    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo">
+                </label>
+                <ul>
+                    <li><a class="active" href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#foot">About</a></li>
+                    <li><a href="{{ url_for('home') }}#detail">Services</a></li>
+                    <li><a href="{{ url_for('home') }}#foot">Contact</a></li>
+                    <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+                </ul>
+                <label id="menu-icon-label" for="menu-icon">&#9776;</label>
+            </nav>
+
+            <div id="timer-container">
+                <h1>OLYMPIC GAMES PARIS 2024</h1>
+                <div id="countdown">
+                    <div class="time">
+                        <h2 id="days"> </h2>
+                        <small>Days</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="hours"> </h2>
+                        <small>Hours</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="minutes"> </h2>
+                        <small>Mins</small>
+                    </div>
+                    <div class="time">
+                        <h2 id="seconds"> </h2>
+                        <small>Sec</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-------------------------  SERVICES  ------------------------------------>
+    <section id="detail">
+        <div class="detail-section">
+
+            <h1> Olympics Details</h1>
+            <div class="container">
+
+                <div class="custom-data">
+                    <img src="{{ url_for('static', filename='Images/games.png') }}" alt="image not found" height="200px"
+                        width="300px">
+                    <h3>Games</h3>
+                    <p>
+                        Dive into the world of Olympic Games - past, present, and future. Discover iconic moments,
+                        records,
+                        and achievements of legendary Indian athletes across various sports. Immerse yourself in the
+                        spirit
+                        of global unity and sportsmanship that the Olympics represent.
+                    </p>
+                    <a href="{{ url_for('games') }}"> <button>Read More</button></a>
+                </div>
+
+                <div class="custom-data">
+                    <img src="{{ url_for('static', filename='Images/athletes.jpeg') }}" alt="image not found"
+                        height="200px" width="300px">
+                    <h3>Athletes</h3>
+                    <p>
+                        Meet Indian Olympic legends who redefined sports history. Explore profiles of extraordinary
+                        athletes, their journeys to greatness, and their record-breaking performances on the world's
+                        grandest stage.
+                    </p>
+                    <a href="{{ url_for('athletes') }}"> <button>Read More</button></a>
+
+                </div>
+
+                <div class="custom-data">
+                    <img src="{{ url_for('static', filename='Images/olympics_visualization.jpg') }}"
+                        alt="image not found" height="200px" width="300px">
+                    <h3>Olympics Visualization</h3>
+                    <p>
+                        Experience data in a captivating way! Explore interactive charts and graphs showcasing Olympic
+                        performance trends, medal distributions, and more. Discover the power of data visualization in
+                        understanding the impact of the Olympic Games.
+                    </p>
+                    <a href="{{ url_for('visualization') }}"> <button>Read More</button></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-------------------------  ABOUT US / FOOTER  ------------------------------------>
+    <footer id="foot">
+        <div class="foot-content">
+            <!-- right box is left box -->
+            <div class="right-box">
+
+                <h1> Olympians
+                    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo" height="35px"
+                        width="35px">
+                </h1>
+
+            </div>
+            <!-- Actually left box is right box  in real -->
+            <div class="left-box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>
+                        A website for people interested in olympic games.
+                        Here you can see the upcoming olympic games, details of games played in olympics,
+                        statistics of all athletes and also you can visulaize the statistics of players
+                        according to your preferences with the help of different charts.
+                    </p>
+                    <!-- <div class="social">
+                        <a href="#"><span><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-instagram" style="color: #f5f7f9;"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-facebook" style="color: #f3f4f7;"></i></span></a>
+                        <a href="#"><span><i class="fa-brands fa-linkedin" style="color: #f9fafa;"></i></span></a>
+                    </div> -->
+                </div>
+            </div>
+
+
+            <div class="center-box">
+                <!-- center box  -->
+                <h2>Contact </h2>
+                <div class="content">
+                    <div class="place">
+                        <span>
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <span class="text">Indore, Madhya Pradesh</span>
+                    </div>
+                    <div class="LinkedIn">
+                        <a href="https://www.linkedin.com/in/lokesh-yadav-98680b229/" target="_blank">
+                            <span><i class="fab fa-linkedin"></i></span> <!-- Use the LinkedIn icon class -->
+                            <span class="text">Lokesh Yadav</span>
+                        </a>
+                    </div>
+                    <div class="LinkedIn">
+                        <a href="https://www.linkedin.com/in/tanushreey07" target="_blank">
+                            <span><i class="fab fa-linkedin"></i></span> <!-- Use the LinkedIn icon class -->
+                            <span class="text">Tanushree Yadav</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+<!-- JavaScript file placed here so that used elements in js file are created before loading -->
+<script src="{{ url_for('static', filename='JavaScript/countdown_timer.js') }}"></script>
+
+</html>

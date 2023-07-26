@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athletes | Olympians</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/athletes.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+</head>
+
+<body>
+    <!-------------------------  HEADER  ------------------------------------>
+
+    <header id="home">
+        <div class="image">
+            <nav>
+                <input type="checkbox" id="menu-icon">
+                <label class="logo">
+                    Olympians
+                    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo">
+                </label>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('games') }}">Games</a></li>
+                    <li><a class="active" href="{{ url_for('athletes') }}">Athletes</a></li>
+                    <li><a href="{{ url_for('visualization') }}">Visualization</a></li>
+                </ul>
+                <label id="menu-icon-label" for="menu-icon">&#9776;</label>
+            </nav>
+        </div>
+    </header>
+    <!-------------------------  HEADER   END ------------------------------------>
+    <section id="detail">
+        <div class="detail-section">
+
+            <h1>Indian Players Details</h1>
+            <div class="container">
+
+                <div class="custom-data" id="Athlets">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/Milkha_Singh.jpg') }}" alt="">
+                        <h2>Milkha Singh</h2>
+                        <p>Milkha Singh from Punjab, also known as "The Flying Sikh," was an Indian track and field athlete 
+                            and one of the country's most legendary sports personalities. Milkha Singh specialized in 
+                            middle-distance and sprint events, particularly the 400 meters race. He represented India in several 
+                            international competitions, including the Olympic Games and Commonwealth Games, throughout the 1950s and 1960s. 
+                            One of Milkha Singh's most notable achievements was at the 1958 Asian Games held in Tokyo, where he won 
+                            multiple medals, including a gold medal in the 400 meters race, making him the first Indian athlete to achieve 
+                            this feat at an international sporting event.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Athelets List</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> Anju Bobby George (Long Jump - retired)
+                                </li>
+                                <li> Dutee Chand (Sprint)
+                                </li>
+                                <li> Hima Das (Sprint)
+                                </li>
+                                <li> Milkha Singh (Sprint - retired)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="Archery">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/Dola_banerjee.jpeg') }}" alt="">
+                        <h2> Dola Banerjee</h2>
+                        <p>A veteran of two Olympic Games, Dola Banerjee is India's first-ever Indian archer on an
+                            international level. She participated in Athens 2004, becoming the first Indian woman archer
+                            to qualify for the Olympic Games.
+
+                            Banerjee's list of “the firsts” continued when she won a Gold Medal at the 2007 Archery
+                            World Cup, the first Indian woman and second overall to do so. She also won the team gold at
+                            the 2010 Commonwealth Games and followed it with a bronze in the individual event. Yet
+                            another bronze came in the team event at the 2010 Asian Games.</p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Archers List</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> Atanu Das</li>
+                                <li> Abhishek Verma</li>
+                                <li> Bombayla Devi Laishram</li>
+                                <li>Jayanta Talukdar </li>
+                                <li> Limba Ram </li>
+                                <li>Deepika Kumari</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="badminton">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/PV_Sindhu_headshot.jpg') }}" alt="">
+                        <h2> Pusarla Venkata Sindhu (P.V. Sindhu)</h2>
+                        <p>
+                            Pusarla Venkata Sindhu (P.V. Sindhu) is from Telangana, she won the silver medal in women's
+                            singles badminton at the 2016 Summer Olympics held in Rio de Janeiro, Brazil. Her remarkable
+                            performance in the tournament earned her recognition as the first Indian woman to win a
+                            silver medal at the Olympics. At the 2020 Summer Olympics (held in 2021 due to
+                            postponement), Sindhu continued her impressive run and won the bronze medal in the women's
+                            singles event. With this achievement, she became the first Indian woman to win
+                            two Olympic medals.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Badminton players</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li>Kidambi Srikanth
+                                </li>
+                                <li>. P.V. Sindhu </li>
+                                <li> P. Kashyap
+                                </li>
+                                <li> Saina Nehwal
+                                </li>
+                                <li> Satwiksairaj Rankireddy (Doubles)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="custom-data" id="cycling">
+
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/Esow.jpg') }}" alt="">
+                        <h2> Esow Alben</h2>
+                        <p>
+                            Esow Alben is an Indian track cyclist from Andaman and Nicobar Islands. He is the first
+                            Indian to win medal at the 2018 UCI Junior Track Cycling World Championships when he won
+                            Silver at Keirin event in Aigle, Switzerland. In same year he also won 3 Golds in Team
+                            Sprint, Keirin and 200m Time Trial at Junior Asian Track Cycling championships in Nilai,
+                            Malaysia.
+
+                            In 2019, Esow won 3 Golds in Sprint, Team Sprint and Keirin event at Junior Asian Track
+                            Cycling championships in Jakarta, Indonesia.
+
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Cyclist</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> Deborah Herold (Track and Road Cycling)
+                                </li>
+                                <li>Esow Alben (Track Cycling)
+                                </li>
+                                <li> Ronaldo Singh (Mountain Biking)
+                                </li>
+                                <li> Ronaldo Singh (Mountain Biking)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="hockey">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/Dhyan_Chand_closeup.jpg') }}" alt="">
+                        <h2>Major Dhyan Chand</h2>
+                        <p>Major Dhyan Chand was from Prayagraj, he was a key player in the Indian men's hockey team
+                            during the 1920s and 1930s, considered the golden era of Indian hockey.
+                            He won three Olympic gold medals with the Indian team at the Summer Olympics: 1928
+                            (Amsterdam), 1932 (Los Angeles), and 1936 (Berlin).
+                            Dhyan Chand's goal-scoring abilities, extraordinary ball control, and incredible dribbling
+                            skills earned him the nickname "The Wizard" and "The Magician" of hockey.</p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Hpckey Player</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> . Balbir Singh Sr. (Forward - passed away in 2021)
+                                </li>
+                                <li> Dhyan Chand (Forward - all-time great, retired)
+                                </li>
+                                <li> Dhanraj Pillay (Forward - retired)
+                                </li>
+                                <li> P.R. Sreejesh (Goalkeeper)
+                                </li>
+                                <li> Rani Rampal (Forward)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="Jawalin">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/Neeraj_Chopra_Olympic_gold_medalist.jpg') }}"
+                            alt="">
+                        <h2>Neeraj Chopra</h2>
+                        <p>Neeraj Chopra from Haryana is one of India's most promising athletes in javelin throw and has
+                            represented the country in various international competitions.
+                            He won the gold medal in javelin throw at the 2018 Asian Games held in Jakarta, Indonesia.
+                            His throw of 88.06 meters earned him the top spot on the podium and made him the first
+                            Indian javelin thrower to win an Asian Games gold medal.
+                            Neeraj Chopra has also achieved success in the Commonwealth Games, winning a gold medal at
+                            the 2018 Gold Coast Commonwealth Games with a throw of 86.47 meters.</p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Jawalin Player</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> Shivpal Singh
+                                </li>
+                                <li> Annu Rani
+                                </li>
+                                <li> Rajinder Singh Rahelu
+                                </li>
+                                <li> Rohit Yadav
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="shooting">
+
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/bindra.jpg') }}" alt="">
+                        <h2> Abhinav Bindra</h2>
+                        <p>
+                            Abhinav Bindra from Uttarakhand is India's most successful shooter and the country's only
+                            individual Olympic gold medalist in shooting.
+                            He won the gold medal in the 10m Air Rifle event at the 2008 Summer Olympics held in
+                            Beijing, China. His remarkable performance in the final round earned him the top spot on the
+                            podium, making him the first Indian to win an individual Olympic gold medal in any sport.
+                            Abhinav Bindra has also won multiple medals at the Commonwealth Games and Asian Games,
+                            showcasing his consistency and excellence in the sport.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Shooters</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li>Abhinav Bindra (10m Air Rifle - retired)
+                                </li>
+                                <li>Anjali Bhagwat (10m Air Rifle - retired)
+                                </li>
+                                <li> Gagan Narang (10m Air Rifle)
+                                </li>
+                                <li>Manu Bhaker (10m Air Pistol)
+                                </li>
+                                <li>Saina Singh (10m Air Pistol)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="table--tennies">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/Achata.jpeg') }}" alt="">
+                        <h2>Achanta Sharath Kamal </h2>
+                        <p>
+                            Achanta Sharath Kamal from Tamil Nadu is one of India's most accomplished table tennis
+                            players, and he has been a dominant force in the sport for many years.
+                            He has represented India in multiple Olympic Games, Commonwealth Games, Asian Games, and
+                            other prestigious international tournaments.
+                            Sharath Kamal is the first Indian table tennis player to break into the top 30 of the ITTF
+                            (International Table Tennis Federation) world rankings.
+                            He has won several medals in the Commonwealth Games and South Asian Games, showcasing his
+                            consistency and talent in the sport.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Table-Tennies player</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> Achanta Sharath Kamal
+                                </li>
+                                <li> . G. Sathiyan
+                                </li>
+                                <li> Manika Batra
+                                </li>
+                                <li> Mouma Das
+                                </li>
+                                <li> Soumyajit Ghosh (subject to controversy - rankings may have changed)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="tennies">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/peas.jpeg') }}" alt="">
+                        <h2> Leander Paes </h2>
+                        <p>
+                            Leander Paes from West Bengal is one of India's most successful and celebrated tennis
+                            players in Olympic history.
+                            He has represented India in seven Olympic Games, starting from the 1992 Barcelona Olympics
+                            and continuing until the 2016 Rio de Janeiro Olympics. He became the first Indian to compete
+                            in seven consecutive Summer Olympics.
+                            Paes has won an Olympic medal for India. He achieved this feat at the 1996 Atlanta Olympics,
+                            where he won the bronze medal in men's singles tennis.
+                            In addition to his Olympic success, Leander Paes has an illustrious tennis career in doubles
+                            and mixed doubles. He has won numerous Grand Slam titles, including Wimbledon, the US Open,
+                            the Australian Open, and the French Open. Paes is known for his strong net play, excellent
+                            volleying skills, and remarkable achievements in doubles events.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian Tennies Player</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li>Leander Paes (Doubles - retired)
+                                </li>
+                                <li>Mahesh Bhupathi (Doubles - retired)
+                                </li>
+                                <li> Rohan Bopanna (Doubles)
+                                </li>
+                                <li>Sania Mirza (Doubles - primarily represented in Women's)
+                                </li>
+                                <li>Sumit Nagal (Singles)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="weightlifting">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/karnam.jpeg') }}" alt="">
+                        <h2> Karnam Malleswari </h2>
+                        <p>
+                            Karnam Malleswari from Andhra Pradesh is India's most successful weightlifter in Olympic
+                            history.
+                            She won the bronze medal in the women's 69 kg category at the 2000 Summer Olympics held
+                            in
+                            Sydney, Australia. Her remarkable performance in the event earned her the distinction of
+                            being the first Indian woman to win an Olympic medal.
+                            Karnam Malleswari's bronze medal win at the 2000 Sydney Olympics was a historic moment
+                            for
+                            Indian weightlifting and women's sports. She showcased her strength, determination, and
+                            skill on the international stage, becoming an inspiration for aspiring
+                            weightlifters in India.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian weightliters</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li>Karnam Malleswari (Retired)
+                                </li>
+                                <li> Mirabai Chanu
+                                </li>
+                                <li>Sanjita Chanu
+                                </li>
+                                <li> Satish Sivalingam
+                                </li>
+                                <li> Saikhom Mirabai Chanu
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="wrestling">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/shushil.jpeg') }}" alt="">
+                        <h2> Sushil Kumar</h2>
+                        <p>
+                            Sushil Kumar from Delhi is one of India's most successful and celebrated wrestlers in
+                            Olympic history.
+                            He won a bronze medal in men's freestyle wrestling (66 kg category) at the 2008 Summer
+                            Olympics held in Beijing, China. This victory made him the first Indian wrestler to win
+                            an
+                            Olympic medal in 56 years.
+                            At the 2012 Summer Olympics held in London, United Kingdom, Sushil Kumar achieved a
+                            historic
+                            feat by winning a silver medal in the same weight category. He became the first Indian
+                            athlete to win back-to-back Olympic medals.
+                            In addition to his Olympic success, Sushil Kumar has won numerous medals in other
+                            international wrestling events, including the Commonwealth Games, Asian Games, and World
+                            Championships.
+
+                            Sushil Kumar's achievements have significantly contributed to popularizing wrestling in
+                            India and inspiring a new generation of wrestlers in the country.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian wrestlers</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> Bajrang Punia (Freestyle)
+                                </li>
+                                <li> Sushil Kumar (Freestyle - now involved in administrative roles)
+                                </li>
+                                <li> Vinesh Phogat (Freestyle)
+                                </li>
+                                <li> Yogeshwar Dutt (Freestyle - retired)
+                                </li>
+                                <li> Sakshi Malik (Freestyle) </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="custom-data" id="gymnastics">
+                    <div class="ath-image">
+                        <img src="{{ url_for('static', filename='Images/dipa.jpeg') }}" alt="">
+                        <h2>Dipa Karmakar </h2>
+                        <p>
+                            Dipa Karmakar from Tripura is India's most accomplished and renowned gymnast in Olympic
+                            history.
+                            She represented India at the 2016 Rio de Janeiro Olympics, becoming the first Indian
+                            female
+                            gymnast to qualify for the Olympic Games.
+                            In the women's vault event, Dipa executed the difficult Produnova vault, which is
+                            considered
+                            one of the most challenging and risky vaults in gymnastics. Her daring performance in
+                            the
+                            finals earned her a fourth-place finish, narrowly missing the bronze medal.
+                            Dipa Karmakar's achievements in gymnastics have been groundbreaking for Indian
+                            gymnastics.
+                            Her successful execution of the Produnova vault brought international attention and
+                            acclaim
+                            to her skills and fearlessness as a gymnast.
+                        </p>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Top Indian gymnasticsers</button>
+                        <div class="dropdown-content">
+                            <ul style="list-style-type:disc" ;>
+                                <li> Ashish Kumar</li>
+                                <li>Nayak</li>
+                                <li>Rakesh Patra</li>
+                                <li> Aruna Budda Reddy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+     <script>
+        // Function to toggle the player list visibility
+        function togglePlayerList(btn) {
+            const customDataDiv = btn.parentElement;
+            const playerList = customDataDiv.querySelector('.dropdown-content');
+            customDataDiv.classList.toggle('show');
+
+            // Adjusting the height for transition effect
+            if (customDataDiv.classList.contains('show')) {
+                playerList.style.maxHeight = playerList.scrollHeight + 'px';
+            } else {
+                playerList.style.maxHeight = '0';
+            }
+        }
+
+        // Event listeners for all dropbtn buttons
+        const dropbtns = document.querySelectorAll('.dropbtn');
+        dropbtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                togglePlayerList(this);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback | Olympians</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/feedback.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+  <script src="https://kit.fontawesome.com/e11a2cc4f5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-------------------------  HEADER  ------------------------------------>
+  <header id="home">
+    <div class="image">
+      <nav>
+        <input type="checkbox" id="menu-icon">
+        <label class="logo">
+          Olympians
+          <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo">
+        </label>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('home') }}#foot">About</a></li>
+          <li><a href="{{ url_for('home') }}#detail">Services</a></li>
+          <li><a href="{{ url_for('home') }}#foot">Contact</a></li>
+          <li><a class="active" href="{{ url_for('feedback') }}">Feedback</a></li>
+        </ul>
+        <label id="menu-icon-label" for="menu-icon">&#9776;</label>
+      </nav>
+    </div>
+  </header>
+  <!-------------------------  HEADER   END ------------------------------------>
+  <div class="container">
+    <form id="feedbackForm" action="{{ url_for('submit_feedback') }}" method="POST">
+      <h1>Give Your Feedback</h1>
+      <div class="id">
+        <i class="far fa-user icons"></i>
+        <input type="text" name="full_name" placeholder="Full Name">
+      </div>
+      <div class="id">
+        <i class="far fa-envelope icons"></i>
+        <input type="email" name="email" placeholder="Email Address">
+      </div>
+      <textarea name="suggestion" cols="15" rows="5" placeholder="Any suggestion"></textarea>
+      <div>
+        <!-- Using a regular button (type="button") to prevent default form submission -->
+        <button type="button" onclick="submitFeedback();">Submit</button>
+      </div>
+      <div id="response">
+        Feedback submitted
+      </div>
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='JavaScript/feedbackform.js') }}"></script>
+
+</body>
+
+</html>

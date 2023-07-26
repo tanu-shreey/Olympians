@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games | Olympians</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/games.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/navbar.css') }}">
+</head>
+
+<body>
+    <header id="home">
+        <div class="image">
+            <nav>
+                <input type="checkbox" id="menu-icon">
+                <label class="logo">
+                    Olympians
+                    <img src="{{ url_for('static', filename='Images/logo.png') }}" alt="logo">
+                </label>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a class="active" href="{{ url_for('games') }}">Games</a></li>
+                    <li><a href="{{ url_for('athletes') }}">Athletes</a></li>
+                    <li><a href="{{ url_for('visualization') }}">Visualization</a></li>
+                </ul>
+                <label id="menu-icon-label" for="menu-icon">&#9776;</label>
+            </nav>
+        </div>
+    </header>
+
+    <section id="sports">
+        <div class="sports-section">
+            <h1> Olympic Games Participated By Indian Players</h1>
+            <div class="container">
+
+                <div class="sports-data" id="A">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Athe"><img src="{{ url_for('static', filename='Images/Ath.png') }}" alt="image not found"></a>
+                    </span>
+                    <h3>Athletes</h3>
+                </div>
+
+                <div class="sports-data" id="B">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Arch  ">
+                            <img src="{{ url_for('static', filename='Images/Archery.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Archery</h3>
+                </div>
+
+                <div class="sports-data" id="C">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Bad">
+                            <img src="{{ url_for('static', filename='Images/badminton.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Badminton</h3>
+                </div>
+
+                <div class="sports-data" id="D">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Cycle ">
+                            <img src="{{ url_for('static', filename='Images/cycling.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Cycling</h3>
+                </div>
+
+                <div class="sports-data" id="E">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Hock">
+                            <img src="{{ url_for('static', filename='Images/Hockey.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Hockey</h3>
+                </div>
+
+                <div class="sports-data" id="F">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Jav">
+                            <img src="{{ url_for('static', filename='Images/javelin.jpg') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Javelin Throw</h3>
+                </div>
+
+                <div class="sports-data" id="G">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Shoot">
+                            <img src="{{ url_for('static', filename='Images/shooting.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Shooting</h3>
+                </div>
+
+                <div class="sports-data" id="H">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#table">
+                            <img src="{{ url_for('static', filename='Images/table.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Table-Tennis</h3>
+                </div>
+
+                <div class="sports-data" id="J">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#ten">
+                            <img src="{{ url_for('static', filename='Images/Tennis.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Tennis</h3>
+                </div>
+
+                <div class="sports-data" id="K">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#weight">
+                            <img src="{{ url_for('static', filename='Images/weightlift.png') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Weight Lifting</h3>
+                </div>
+
+                <div class="sports-data" id="L">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#wrest">
+                            <img src="{{ url_for('static', filename='Images/wrestling.jpg') }}" alt="image not found">
+                        </a>
+                    </span>
+                    <h3>Wrestling</h3>
+                </div>
+
+                <div class="sports-data" id="M">
+                    <span>
+                        <a href="{{ url_for('game_details') }}#Gym">
+                            <img src="{{ url_for('static', filename='Images/Fencing.png') }}" alt="image not found"></a>
+                    </span>
+                    <h3>Fencing</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
