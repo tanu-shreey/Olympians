@@ -253,6 +253,16 @@ def get_data_of_chart3():
     conn.close()    
     return flask.jsonify(data)
 
+@app.route('/olympians/get_feedback_data')
+def get_feedback_data():
+    conn = mysql.connect
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM feedbacks ORDER BY time DESC;')
+    data = cursor.fetchall()
+    conn.close()    
+    return flask.jsonify(data)
+
+
 ##_____________+_+_______________##
 if __name__ == "__main__":
     app.run(debug=True)
