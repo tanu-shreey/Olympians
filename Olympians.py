@@ -5,12 +5,17 @@ import datetime
 app = flask.Flask(__name__)
 # app.secret_key = "secret key"
 
-# CONNECT TO THE DATABASE
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'olympics_db'
+# CONNECT TO THE LOCAL DATABASE
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_DB'] = 'olympics_db'
 
+# CONNECT TO THE HOSTED DATABASE
+app.config['MYSQL_HOST'] = 'sql.freedb.tech'
+app.config['MYSQL_USER'] = 'freedb_lokesh'
+app.config['MYSQL_PASSWORD'] = 'kq4Jq*Efa8KwtgQ'
+app.config['MYSQL_DB'] = 'freedb_olympians_db'
 mysql = MySQL(app)
 
 
@@ -68,7 +73,8 @@ def visualization():
     Players = cursor.fetchone()[0]
     cursor.execute('SELECT COUNT(DISTINCT Sport) FROM indian_athletes;')
     Sports = cursor.fetchone()[0]
-    cursor.execute('SELECT Sport, CAST(AVG(Age) AS INT), ROUND(AVG(Height)), ROUND(AVG(Weight)) FROM indian_athletes GROUP BY Sport;')
+    # cursor.execute('SELECT Sport, CAST(AVG(Age) AS INT), ROUND(AVG(Height)), ROUND(AVG(Weight)) FROM indian_athletes GROUP BY Sport;')
+    cursor.execute('SELECT Sport, AVG(Age) AS AvgAge, ROUND(AVG(Height)) AS AvgHeight, ROUND(AVG(Weight)) AS AvgWeight FROM indian_athletes GROUP BY Sport;')
     temp = cursor.fetchall()
     Avg_ahw_lables = []
     Avg_a = []
@@ -76,9 +82,9 @@ def visualization():
     Avg_w = []
     for (game, a, h, w) in temp:
         Avg_ahw_lables.append(game)
-        Avg_a.append(a)
-        Avg_h.append(h)
-        Avg_w.append(w)
+        Avg_a.append(round(a))
+        Avg_h.append(round(h))
+        Avg_w.append(round(w))
     cursor.execute('SELECT COUNT(*) FROM indian_athletes GROUP BY Sex ORDER BY SEX;')
     temp = cursor.fetchall()
     F = temp[0][0]
