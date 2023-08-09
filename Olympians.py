@@ -12,10 +12,18 @@ app = flask.Flask(__name__)
 # app.config['MYSQL_DB'] = 'olympics_db'
 
 # CONNECT TO THE HOSTED DATABASE
-app.config['MYSQL_HOST'] = 'sql.freedb.tech'
+# app.config['MYSQL_HOST'] = 'sql.freedb.tech'
+# app.config['MYSQL_USER'] = 'freedb_lokesh'
+# app.config['MYSQL_PASSWORD'] = 'kq4Jq*Efa8KwtgQ'
+# app.config['MYSQL_DB'] = 'freedb_olympians_db'
+
+# HOSTED ON NEW SERVER
+app.config['MYSQL_HOST'] = 'db4free.net'
 app.config['MYSQL_USER'] = 'freedb_lokesh'
 app.config['MYSQL_PASSWORD'] = 'kq4Jq*Efa8KwtgQ'
-app.config['MYSQL_DB'] = 'freedb_olympians_db'
+app.config['MYSQL_DB'] = 'db_olympians'
+
+
 mysql = MySQL(app)
 
 
