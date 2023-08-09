@@ -187,7 +187,7 @@ footer {
 
 @media only screen and (max-width: 500px) {
     #timer-container h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
     .custom-data {
         margin: 5px;
