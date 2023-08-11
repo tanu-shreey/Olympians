@@ -1,6 +1,4 @@
-
-
-// -- INITIALIZATION OF CHARTS ---------------
+// -- INITIALIZATION OF CHARTS ---------------//
 const ctx1 = document.getElementById('myChart1').getContext('2d');
 const ctx2 = document.getElementById('myChart2').getContext('2d');
 const ctx3 = document.getElementById('myChart3').getContext('2d');
@@ -36,7 +34,7 @@ const myChart1 = new Chart(ctx1, {
 				display: true,
 				text: "Top Olympic Medal Winners In India",
 				font: {
-					size: 20,
+					size: window.innerWidth < 401 ? 16 : 20,
 					weight: 'bold',
 				},
 			},
@@ -51,14 +49,14 @@ const myChart1 = new Chart(ctx1, {
 				},
 				ticks: {
 					font: {
-						size: 14,
+						size: window.innerWidth < 401 ? 11 : 14,
 					},
 				},
 			},
 			y: {
 				ticks: {
 					font: {
-						size: 14,
+						size: window.innerWidth < 401 ? 8 : 10,
 					},
 				},
 			},
@@ -132,7 +130,7 @@ const myChart3 = new Chart(ctx3, {
 				display: true,
 				text: "Olympic Participants From India",
 				font: {
-					size: 20,
+					size: window.innerWidth < 401 ? 16 : 20,
 					weight: 'bold',
 				},
 			},
@@ -147,14 +145,14 @@ const myChart3 = new Chart(ctx3, {
 				},
 				ticks: {
 					font: {
-						size: 14,
+						size: window.innerWidth < 401 ? 11 : 14,
 					},
 				},
 			},
 			y: {
 				ticks: {
 					font: {
-						size: 14,
+						size: window.innerWidth < 401 ? 8 : 10,
 					},
 				},
 			},
@@ -183,7 +181,7 @@ const myChart4 = new Chart(ctx4, {
 					display: true,
 					text: 'Average Age Of Players',
 					font: {
-						size: 14,
+						size: window.innerWidth < 401 ? 11 : 14,
 						weight: 'bold'
 					}
 				},
@@ -232,12 +230,13 @@ const myChart5 = new Chart(ctx5, {
 					display: true,
 					text: 'Number Of Matches',
 					font: {
-						size: 14,
+						size: window.innerWidth < 401 ? 11 : 14,
 						weight: 'bold'
 					}
 				},
 				ticks: {
 					beginAtZero: true,
+					stepSize: 25,
 				},
 			},
 		},
@@ -246,7 +245,7 @@ const myChart5 = new Chart(ctx5, {
 				display: true,
 				text: "Number Of Matches In Each City",
 				font: {
-					size: 20,
+					size: window.innerWidth < 401 ? 16 : 20,
 				},
 			},
 			legend: {
